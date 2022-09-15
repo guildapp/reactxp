@@ -885,6 +885,8 @@ export interface LinkProps extends CommonStyledProps<LinkStyleRuleSet, RX.Link> 
     tabIndex?: number;
     accessibilityId?: string;
     autoFocus?: boolean; // The component is a candidate for being autofocused.
+    className?: string;
+    target?: '_blank' | '_self' | '_parent' | '_top';
 
     onPress?: (e: RX.Types.SyntheticEvent, url: string) => void;
     onLongPress?: (e: RX.Types.SyntheticEvent, url: string) => void;
