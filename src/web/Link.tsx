@@ -68,7 +68,7 @@ export class Link extends React.Component<Types.LinkProps, Types.Stateless> {
                 style={ this._getStyles() }
                 title={ this.props.title }
                 href={ this.props.url }
-                target={ '_blank' }
+                target={ this.props.target || '_blank' }
                 rel={ 'noreferrer' }
                 onClick={ this._onClick }
                 onMouseEnter={ this.props.onHoverStart }
@@ -78,6 +78,7 @@ export class Link extends React.Component<Types.LinkProps, Types.Stateless> {
                 tabIndex={ this.props.tabIndex }
                 onContextMenu={ this.props.onContextMenu ? this._onContextMenu : undefined }
                 data-test-id={ this.props.testId }
+                className={ this.props.className }
             >
                 { this.props.children }
             </a>
